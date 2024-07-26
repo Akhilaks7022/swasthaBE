@@ -10,6 +10,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { RequestContextMiddleware } from 'routers/middlewares/requestcontext.middleware';
 import { RequestContextPreparationService } from 'routers/context/request/requestcontext.service';
 import { RegistrationController } from './registration/controller/registration.controller';
+import { ContactController } from './contact/controller/contact.controller';
 
 
 
@@ -17,7 +18,8 @@ import { RegistrationController } from './registration/controller/registration.c
   imports: [ConfigModule.forRoot(), HttpModule, ScheduleModule.forRoot()],
   controllers: [
     AppController,
-    RegistrationController
+    RegistrationController,
+    ContactController
     
   ],
   providers: [
